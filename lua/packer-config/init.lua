@@ -2,7 +2,6 @@ return require'packer'.startup(function()
     use 'wbthomason/packer.nvim'
     use 'kyazdani42/nvim-web-devicons'
     use 'EdenEast/nightfox.nvim'
-    use({ 'rose-pine/neovim', as = 'rose-pine' })
     use 'kyazdani42/nvim-tree.lua'
     use 'neovim/nvim-lspconfig'
     use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
@@ -14,5 +13,10 @@ return require'packer'.startup(function()
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
+    }
+    use 'm4xshen/autoclose.nvim'
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 end)
