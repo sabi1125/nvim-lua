@@ -1,4 +1,5 @@
 local builtin = require('telescope.builtin')
+require("telescope").load_extension("noice")
 vim.keymap.set('n', '<leader><leader>f', builtin.find_files, {})
 vim.keymap.set('n', '<leader><leader>g', builtin.git_files, {})
 vim.keymap.set('n', '<leader><leader>s', function() 
