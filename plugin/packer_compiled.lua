@@ -89,12 +89,6 @@ _G.packer_plugins = {
     path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["everforest-nvim"] = {
-    config = { "\27LJ\2\nø\1\0\2\4\0\16\0!5\2\2\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\5\1=\3\6\2=\2\0\0005\2\b\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\t\1=\3\6\2=\2\a\0005\2\v\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\f\1=\3\6\2=\2\n\0005\2\14\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\15\1=\3\6\2=\2\r\0K\0\1\0\ngreen\1\0\0\19DiagnosticHint\tblue\1\0\0\19DiagnosticInfo\vyellow\1\0\0\19DiagnosticWarn\asp\bred\abg\afg\1\0\0\tnone\20DiagnosticError…\1\1\0\4\0\t\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0003\3\3\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0'\2\b\0B\0\2\1K\0\1\0\27colorscheme everforest\bcmd\bvim\18on_highlights\1\0\0\0\nsetup\15everforest\frequire\0" },
-    loaded = true,
-    path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/everforest-nvim",
-    url = "https://github.com/neanias/everforest-nvim"
-  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -115,15 +109,10 @@ _G.packer_plugins = {
     path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["neo-tree.nvim"] = {
+  nerdcommenter = {
     loaded = true,
-    path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
-    url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
-  },
-  ["nui.nvim"] = {
-    loaded = true,
-    path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/nui.nvim",
-    url = "https://github.com/MunifTanjim/nui.nvim"
+    path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/nerdcommenter",
+    url = "https://github.com/preservim/nerdcommenter"
   },
   ["nvim-autopairs"] = {
     config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
@@ -146,6 +135,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/nvim-surround",
     url = "https://github.com/kylechui/nvim-surround"
+  },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/nvim-tree/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -172,6 +166,11 @@ _G.packer_plugins = {
     path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
   ["vim-floaterm"] = {
     loaded = true,
     path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/vim-floaterm",
@@ -185,10 +184,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: everforest-nvim
-time([[Config for everforest-nvim]], true)
-try_loadstring("\27LJ\2\nø\1\0\2\4\0\16\0!5\2\2\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\5\1=\3\6\2=\2\0\0005\2\b\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\t\1=\3\6\2=\2\a\0005\2\v\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\f\1=\3\6\2=\2\n\0005\2\14\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\15\1=\3\6\2=\2\r\0K\0\1\0\ngreen\1\0\0\19DiagnosticHint\tblue\1\0\0\19DiagnosticInfo\vyellow\1\0\0\19DiagnosticWarn\asp\bred\abg\afg\1\0\0\tnone\20DiagnosticError…\1\1\0\4\0\t\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0003\3\3\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0'\2\b\0B\0\2\1K\0\1\0\27colorscheme everforest\bcmd\bvim\18on_highlights\1\0\0\0\nsetup\15everforest\frequire\0", "config", "everforest-nvim")
-time([[Config for everforest-nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")

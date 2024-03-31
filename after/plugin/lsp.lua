@@ -7,8 +7,6 @@ lsp_zero.on_attach(function(client, bufnr)
 end)
 
 require'lspconfig'.anakin_language_server.setup{}
-local lspconfig = require("lspconfig")
-lspconfig.gopls.setup({})
 require("mason").setup({})
 require('mason-lspconfig').setup({
     -- Replace the language servers listed here
@@ -18,11 +16,44 @@ require('mason-lspconfig').setup({
         lsp_zero.default_setup,
     }
 })
-vim.g.go_fmt_command = "goimports"
-require('lspconfig').gopls.setup({
-    settings = {
-        gopls = {
-            gofumpt = true
-        }
-    }
-})
+local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
+
+local M = {}
+
+M.icons = {
+  Class = " ",
+  Color = " ",
+  Constant = " ",
+  Constructor = " ",
+  Enum = " ",
+  EnumMember = " ",
+  Field = "󰄶 ",
+  File = " ",
+  Folder = " ",
+  Function = " ",
+  Interface = "󰜰",
+  Keyword = "󰌆 ",
+  Method = "ƒ ",
+  Module = "󰏗 ",
+  Property = " ",
+  Snippet = "󰘍 ",
+  Struct = " ",
+  Text = " ",
+  Unit = " ",
+  Value = "󰎠 ",
+  Variable = " ",
+}
+
+
+function M.setup()
+  local kinds = vim.lsp.protocol.CompletionItemKind
+  for i, kind in ipairs(kinds) do
+    kinds[i] = M.icons[kind] or kind
+  end
+end
+
+return M

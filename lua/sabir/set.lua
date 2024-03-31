@@ -24,5 +24,3 @@ vim.opt.hlsearch = false
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.swapfile = false
 vim.opt.listchars = 'tab:· ,eol:↴'
-vim.opt.indentexpr = "4" -- Indenting all lines with 4 spaces
-vim.g.nvim_fmt_spaces_per_tab = 4

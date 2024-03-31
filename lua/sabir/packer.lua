@@ -1,5 +1,4 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
@@ -10,39 +9,38 @@ return require('packer').startup(function(use)
         -- or                            , brnch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+
+
+    -- nerdCommenter
+    use { 'preservim/nerdcommenter' }
+    -- treesitter
     use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     -- everforest
-    use({
-        "neanias/everforest-nvim",
-        -- Optional; default configuration will be used if setup isn't called.
-        config = function()
-            require("everforest").setup(
-                {
-                    on_highlights = function (hl, palette)
-                        hl.DiagnosticError = { fg = palette.none, bg = palette.none, sp = palette.red }
-                        hl.DiagnosticWarn = { fg = palette.none, bg = palette.none, sp = palette.yellow }
-                        hl.DiagnosticInfo = { fg = palette.none, bg = palette.none, sp = palette.blue }
-                        hl.DiagnosticHint = { fg = palette.none, bg = palette.none, sp = palette.green }
-                    end
-                })
-            vim.cmd('colorscheme everforest')
-        end,
-    })
+    --use({
+        --"neanias/everforest-nvim",
+        ---- Optional; default configuration will be used if setup isn't called.
+        --config = function()
+            --require("everforest").setup(
+                --{
+                    --on_highlights = function (hl, palette)
+                        --hl.DiagnosticError = { fg = palette.none, bg = palette.none, sp = palette.red }
+                        --hl.DiagnosticWarn = { fg = palette.none, bg = palette.none, sp = palette.yellow }
+                        --hl.DiagnosticInfo = { fg = palette.none, bg = palette.none, sp = palette.blue }
+                        --hl.DiagnosticHint = { fg = palette.none, bg = palette.none, sp = palette.green }
+                    --end
+                --})
+        --end,
+    --})
+    --vim.cmd.colorscheme('everforest')
 
-    -- neo tree
-    use {
-        "nvim-neo-tree/neo-tree.nvim",
-        branch = "v3.x",
-        requires = { 
-            "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-            "MunifTanjim/nui.nvim",
-            -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-            require("neo-tree").setup({
-                filesystem = { filtered_items = { hide_dotfiles = false, hide_gitignored = false } }
-            })
-        },
-    }
+    -- catppuchin
+    --use { "catppuccin/nvim", as = "catppuccin", vim.cmd.colorscheme('catppuccin-frappe') }
+    
+    -- tokyo night
+    use {"folke/tokyonight.nvim"}
+    vim.cmd.colorscheme('tokyonight')
+
+
 
     -- float term
     use 'voldikss/vim-floaterm'
@@ -94,5 +92,11 @@ return require('packer').startup(function(use)
 
     -- go vim
     use ( 'fatih/vim-go', { run = ':GoUpdateBinaries' } )
+    use {
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+        'nvim-tree/nvim-web-devicons', -- optional
+    },
+}
 
 end)
