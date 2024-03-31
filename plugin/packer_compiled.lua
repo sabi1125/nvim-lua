@@ -84,15 +84,16 @@ _G.packer_plugins = {
     path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/blamer.nvim",
     url = "https://github.com/APZelos/blamer.nvim"
   },
-  ["bufferline.nvim"] = {
-    loaded = true,
-    path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
-    url = "https://github.com/akinsho/bufferline.nvim"
-  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["everforest-nvim"] = {
+    config = { "\27LJ\2\nø\1\0\2\4\0\16\0!5\2\2\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\5\1=\3\6\2=\2\0\0005\2\b\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\t\1=\3\6\2=\2\a\0005\2\v\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\f\1=\3\6\2=\2\n\0005\2\14\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\15\1=\3\6\2=\2\r\0K\0\1\0\ngreen\1\0\0\19DiagnosticHint\tblue\1\0\0\19DiagnosticInfo\vyellow\1\0\0\19DiagnosticWarn\asp\bred\abg\afg\1\0\0\tnone\20DiagnosticErrorV\1\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0003\3\3\0=\3\5\2B\0\2\1K\0\1\0\18on_highlights\1\0\0\0\nsetup\15everforest\frequire\0" },
+    loaded = true,
+    path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/everforest-nvim",
+    url = "https://github.com/neanias/everforest-nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
@@ -186,11 +187,6 @@ _G.packer_plugins = {
     path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["tokyonight.nvim"] = {
-    loaded = true,
-    path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
-  },
   ["vim-floaterm"] = {
     loaded = true,
     path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/vim-floaterm",
@@ -201,6 +197,11 @@ _G.packer_plugins = {
     path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  ["vim-gitgutter"] = {
+    loaded = true,
+    path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
+    url = "https://github.com/airblade/vim-gitgutter"
+  },
   ["vim-go"] = {
     loaded = true,
     path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/vim-go",
@@ -209,14 +210,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
 -- Config for: nvim-surround
 time([[Config for nvim-surround]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
 time([[Config for nvim-surround]], false)
+-- Config for: everforest-nvim
+time([[Config for everforest-nvim]], true)
+try_loadstring("\27LJ\2\nø\1\0\2\4\0\16\0!5\2\2\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\5\1=\3\6\2=\2\0\0005\2\b\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\t\1=\3\6\2=\2\a\0005\2\v\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\f\1=\3\6\2=\2\n\0005\2\14\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\15\1=\3\6\2=\2\r\0K\0\1\0\ngreen\1\0\0\19DiagnosticHint\tblue\1\0\0\19DiagnosticInfo\vyellow\1\0\0\19DiagnosticWarn\asp\bred\abg\afg\1\0\0\tnone\20DiagnosticErrorV\1\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0003\3\3\0=\3\5\2B\0\2\1K\0\1\0\18on_highlights\1\0\0\0\nsetup\15everforest\frequire\0", "config", "everforest-nvim")
+time([[Config for everforest-nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

@@ -1,5 +1,3 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
--- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
@@ -16,9 +14,6 @@ return require('packer').startup(function(use)
     -- go vim
     use ( 'fatih/vim-go', { run = ':GoUpdateBinaries' } )
 
-    -- tokyo night
-    use {"folke/tokyonight.nvim"}
-    vim.cmd.colorscheme('tokyonight')
 
     -- float term
     use 'voldikss/vim-floaterm'
@@ -38,42 +33,9 @@ return require('packer').startup(function(use)
     -- fugitive
     use 'tpope/vim-fugitive'
 
-    -- everforest
-    --use({
-        --"neanias/everforest-nvim",
-        ---- Optional; default configuration will be used if setup isn't called.
-        --config = function()
-            --require("everforest").setup(
-                --{
-                    --on_highlights = function (hl, palette)
-                        --hl.DiagnosticError = { fg = palette.none, bg = palette.none, sp = palette.red }
-                        --hl.DiagnosticWarn = { fg = palette.none, bg = palette.none, sp = palette.yellow }
-                        --hl.DiagnosticInfo = { fg = palette.none, bg = palette.none, sp = palette.blue }
-                        --hl.DiagnosticHint = { fg = palette.none, bg = palette.none, sp = palette.green }
-                    --end
-                --})
-        --end,
-    --})
-    --vim.cmd.colorscheme('everforest')
+    -- git gutter
+	use 'airblade/vim-gitgutter'
 
-    -- catppuchin
-    --use { "catppuccin/nvim", as = "catppuccin", vim.cmd.colorscheme('catppuccin-frappe') }
-    -- surround
-    use({
-        "kylechui/nvim-surround",
-        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
-        config = function()
-            require("nvim-surround").setup({
-                -- Configuration here, or leave empty to use defaults
-            })
-        end
-    })
-
-    -- auto-pairs
-    use {
-        "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
-    }
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
@@ -82,7 +44,6 @@ return require('packer').startup(function(use)
     }
 
     -- lsp-zero
-
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
@@ -108,4 +69,45 @@ return require('packer').startup(function(use)
             "rcarriga/nvim-notify",
         }
     }
+    -- surround
+    use({
+        "kylechui/nvim-surround",
+        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+        config = function()
+            require("nvim-surround").setup({
+                -- Configuration here, or leave empty to use defaults
+            })
+        end
+    })
+
+    -- auto-pairs
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
+
+    -- everforest
+    use({
+        "neanias/everforest-nvim",
+        -- Optional; default configuration will be used if setup isn't called.
+        config = function()
+            require("everforest").setup(
+                {
+                    on_highlights = function (hl, palette)
+                        hl.DiagnosticError = { fg = palette.none, bg = palette.none, sp = palette.red }
+                        hl.DiagnosticWarn = { fg = palette.none, bg = palette.none, sp = palette.yellow }
+                        hl.DiagnosticInfo = { fg = palette.none, bg = palette.none, sp = palette.blue }
+                        hl.DiagnosticHint = { fg = palette.none, bg = palette.none, sp = palette.green }
+                    end })
+        end,
+    })
+
+    vim.cmd.colorscheme('everforest')
+
+    -- catppuchin
+    --use { "catppuccin/nvim", as = "catppuccin", vim.cmd.colorscheme('catppuccin-frappe') }
+    -- tokyo night
+    --use {"folke/tokyonight.nvim"}
+    --vim.cmd.colorscheme('tokyonight')
+    --
 end)
