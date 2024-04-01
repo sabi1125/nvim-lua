@@ -6,7 +6,7 @@ require("noice").setup({
                 col = "50%",
             },
             size = {
-                width = "40%",
+                width = "30%",
                 height = "auto",
             },
         },
@@ -29,4 +29,10 @@ require("noice").setup({
             },
         },
     },
+    lsp = {
+        hover = {
+            enabled = false,
+        }
+    }
 })
+
