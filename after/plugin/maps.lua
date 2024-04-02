@@ -1,6 +1,8 @@
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-    border = "rounded",
-    title = "hover",
+    border = 'shadow',
+    pad_top = 1,
+    pad_bottom = 1,
+    wrap = true,
 })
 
 -- show diagnostics
@@ -18,7 +20,14 @@ vim.keymap.set('n', '<leader>i', function()
         return
     end
 
-    vim.diagnostic.open_float(nil, { focus = false, scope = 'cursor' , title = 'diagnostic'})
+    vim.diagnostic.open_float(nil, {
+        focus = false,
+        scope = 'cursor',
+        border = 'shadow',
+        pad_top = 1,
+        pad_bottom = 1,
+        wrap = true
+    })
 end )
 
 -- show relations
