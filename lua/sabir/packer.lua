@@ -33,8 +33,8 @@ return require('packer').startup(function(use)
     -- fugitive
     use 'tpope/vim-fugitive'
 
-    -- git gutter
-	use 'airblade/vim-gitgutter'
+    -- git signs
+    use {'lewis6991/gitsigns.nvim'}
 
     use {
         'nvim-tree/nvim-tree.lua',

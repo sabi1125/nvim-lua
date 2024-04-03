@@ -1,7 +1,7 @@
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-    border = 'shadow',
-    pad_top = 1,
-    pad_bottom = 1,
+    border = {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+    pad_top = 0.8,
+    pad_bottom = 0.8,
     wrap = true,
 })
 
@@ -23,9 +23,9 @@ vim.keymap.set('n', '<leader>i', function()
     vim.diagnostic.open_float(nil, {
         focus = false,
         scope = 'cursor',
-        border = 'shadow',
-        pad_top = 1,
-        pad_bottom = 1,
+        border = {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        pad_top = 0.8,
+        pad_bottom = 0.8,
         wrap = true,
     })
 end )
