@@ -26,7 +26,7 @@ vim.keymap.set('n', '<leader>i', function()
         border = 'shadow',
         pad_top = 1,
         pad_bottom = 1,
-        wrap = true
+        wrap = true,
     })
 end )
 

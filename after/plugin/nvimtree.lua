@@ -18,6 +18,16 @@ require("nvim-tree").setup({
     },
     renderer = {
         group_empty = true,
+        icons = {
+            glyphs = {
+                git = {
+                    unstaged = "◯",
+                    staged = "◉",
+                    deleted = "x",
+                    untracked = "?",
+                }
+            }
+        }
     },
     filters = {
         dotfiles = false,
@@ -30,8 +40,15 @@ require("nvim-tree").setup({
          info = "",
          warning = "",
          error = "",
-       },    }
+       },
+    },
+    actions = {
+        open_file = {
+            quit_on_open = true
+        }
+    },
 })
 
 vim.api.nvim_set_keymap('n', '<leader>t', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>r', ':NvimTreeFocus<CR>', { noremap = true, silent = true })
+
