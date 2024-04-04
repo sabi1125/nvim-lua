@@ -1,10 +1,3 @@
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-    border = {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-    pad_top = 0.8,
-    pad_bottom = 0.8,
-    wrap = true,
-})
-
 -- show diagnostics
 vim.keymap.set('n', '<leader>i', function()
     -- If we find a floating window, close it.
@@ -26,6 +19,7 @@ vim.keymap.set('n', '<leader>i', function()
         border = {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
         pad_top = 0.8,
         pad_bottom = 0.8,
+        width = 120,
         wrap = true,
     })
 end )
@@ -47,7 +41,11 @@ vim.keymap.set('n', '<leader>j', function()
     vim.lsp.buf.hover()
 end)
 
-
+-- keymaps
 vim.api.nvim_set_keymap('n', '<leader>f', ':tabnew<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>a', ':tabprev<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>d', ':tabnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>g', ':Goyo<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>h', ':Goyo!<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>t', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>r', ':NvimTreeFocus<CR>', { noremap = true, silent = true })
