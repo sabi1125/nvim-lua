@@ -1,9 +1,9 @@
 local lsp_zero = require('lsp-zero')
 
 lsp_zero.on_attach(function(client, bufnr)
-  -- see :help lsp-zero-keybindings
-  -- to learn the available actions
-  lsp_zero.default_keymaps({buffer = bufnr})
+    -- see :help lsp-zero-keybindings
+    -- to learn the available actions
+    lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
 require('lspconfig').dartls.setup{}
@@ -22,34 +22,34 @@ require('mason-lspconfig').setup({
 local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
 
 for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
 local M = {}
 
 M.icons = {
-  Class = " ",
-  Color = " ",
-  Constant = " ",
-  Constructor = " ",
-  Enum = " ",
-  EnumMember = " ",
-  Field = "󰄶 ",
-  File = " ",
-  Folder = " ",
-  Function = " ",
-  Interface = "󰜰",
-  Keyword = "󰌆 ",
-  Method = "ƒ ",
-  Module = "󰏗 ",
-  Property = " ",
-  Snippet = "󰘍 ",
-  Struct = " ",
-  Text = " ",
-  Unit = " ",
-  Value = "󰎠 ",
-  Variable = " ",
+    Class = " ",
+    Color = " ",
+    Constant = " ",
+    Constructor = " ",
+    Enum = " ",
+    EnumMember = " ",
+    Field = "󰄶 ",
+    File = " ",
+    Folder = " ",
+    Function = " ",
+    Interface = "󰜰",
+    Keyword = "󰌆 ",
+    Method = "ƒ ",
+    Module = "󰏗 ",
+    Property = " ",
+    Snippet = "󰘍 ",
+    Struct = " ",
+    Text = " ",
+    Unit = " ",
+    Value = "󰎠 ",
+    Variable = " ",
 }
 
 function M.setup()

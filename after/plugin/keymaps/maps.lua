@@ -18,7 +18,7 @@ vim.keymap.set('n', '<leader><leader>f', telescopeBuiltin.find_files, {})
 vim.keymap.set('n', '<leader><leader>g', telescopeBuiltin.git_files, {})
 vim.keymap.set('n', '<leader><leader>n', ':copen<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader><leader>s', function()
-		telescopeBuiltin.grep_string({ search = vim.fn.input("Grep ▶  ") })
+    telescopeBuiltin.grep_string({ search = vim.fn.input("Grep ▶  ") })
 end)
 vim.keymap.set('n', '<leader><leader>z', ':qa<CR>', { noremap = true, silent = true })
 

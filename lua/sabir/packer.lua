@@ -8,26 +8,6 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     use 'simrat39/rust-tools.nvim'
-<<<<<<< Updated upstream
-=======
-
-    use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
-
-    -- markdown mkdx
-    use 'SidOfc/mkdx'
-
-    -- goyo
-    use { 'junegunn/goyo.vim' }
-
-    -- limelight
-    use { 'junegunn/limelight.vim' }
-
-    vim.cmd[[
-    autocmd! User GoyoEnter Limelight
-    autocmd! User GoyoLeave Limelight!
-    ]]
->>>>>>> Stashed changes
-
     use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
 
     -- markdown mkdx
@@ -123,7 +103,7 @@ return require('packer').startup(function(use)
             {'L3MON4D3/LuaSnip'},
         }
     }
-  -- other plugins...
+    -- other plugins...
 
     -- Completion framework:
     use 'hrsh7th/nvim-cmp' 
