@@ -1,4 +1,4 @@
--- Function to truncate long lines in hover messages
+-- Function to truncate long lines in hover message
 local function truncate_long_lines(contents)
     local max_width = 120 -- Maximum width before line break
     local lines = {}
@@ -27,36 +27,3 @@ vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
         vim.lsp.util.focusable_float(result)
     end
 })
-
--- Define the colors you want to use
-local bg_color = '#1f2529' -- Example: Dark Grey
-
--- Set the highlight group for floating windows
-vim.cmd('highlight NormalFloat guibg=' .. bg_color)
-
--- Additionally, you may want to set the highlight for the border of the floating windows
-vim.cmd('highlight FloatBorder guibg=' .. bg_color)
-
--- Set the background color for popup menu
-vim.cmd('highlight Pmenu guibg=' .. bg_color)
-
--- Set the background color for popup menu selection
-vim.cmd('highlight PmenuSel guibg=#D8DEE9')
-
--- Set the background color for the floating window of completion menu
-vim.cmd('highlight NormalFloat guibg=' .. bg_color)
-vim.cmd('highlight FloatBorder guibg=' .. bg_color)
-
--- Set the background color for the floating window of completion menu when a candidate is selected
-vim.cmd('highlight PmenuThumb guibg=' .. bg_color)
-
--- Set the background color for the floating window of completion menu scrollbar
-vim.cmd('highlight PmenuSbar guibg=' .. bg_color)
-
--- Set the background color for the floating window of completion menu scrollbar when it's being dragged
-vim.cmd('highlight PmenuThumb guibg=' .. bg_color)
-
--- Set the background color for the floating window of signature help
-vim.cmd('highlight NormalFloat guibg=' .. bg_color)
-vim.cmd('highlight FloatBorder guibg=' .. bg_color)
-

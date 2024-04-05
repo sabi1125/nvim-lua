@@ -23,5 +23,5 @@ vim.opt.expandtab = true
 vim.opt.hlsearch = false
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.swapfile = false
-vim.opt.listchars = 'tab:· ,eol:↴'
+vim.opt.listchars = 'tab:┃ ,eol:↴'
 vim.opt.fillchars = 'eob:·'

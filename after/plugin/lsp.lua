@@ -57,7 +57,6 @@ function M.setup()
     for i, kind in ipairs(kinds) do
         kinds[i] = M.icons[kind] or kind
     end
-    vim.lsp.diagnostic.show_line_diagnostics()
 end
 
 return M
