@@ -100,10 +100,26 @@ _G.packer_plugins = {
     path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["glow.nvim"] = {
+    config = { "\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tglow\frequire\0" },
+    loaded = true,
+    path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/glow.nvim",
+    url = "https://github.com/ellisonleao/glow.nvim"
+  },
+  ["goyo.vim"] = {
+    loaded = true,
+    path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/goyo.vim",
+    url = "https://github.com/junegunn/goyo.vim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["limelight.vim"] = {
+    loaded = true,
+    path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/limelight.vim",
+    url = "https://github.com/junegunn/limelight.vim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -119,6 +135,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  mkdx = {
+    loaded = true,
+    path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/mkdx",
+    url = "https://github.com/SidOfc/mkdx"
   },
   nerdcommenter = {
     loaded = true,
@@ -187,6 +208,11 @@ _G.packer_plugins = {
     path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["rust-tools.nvim"] = {
+    loaded = true,
+    path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/sabirbarahi/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -210,6 +236,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-surround
+time([[Config for nvim-surround]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
+time([[Config for nvim-surround]], false)
+-- Config for: glow.nvim
+time([[Config for glow.nvim]], true)
+try_loadstring("\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tglow\frequire\0", "config", "glow.nvim")
+time([[Config for glow.nvim]], false)
 -- Config for: everforest-nvim
 time([[Config for everforest-nvim]], true)
 try_loadstring("\27LJ\2\nø\1\0\2\4\0\16\0!5\2\2\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\5\1=\3\6\2=\2\0\0005\2\b\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\t\1=\3\6\2=\2\a\0005\2\v\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\f\1=\3\6\2=\2\n\0005\2\14\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\15\1=\3\6\2=\2\r\0K\0\1\0\ngreen\1\0\0\19DiagnosticHint\tblue\1\0\0\19DiagnosticInfo\vyellow\1\0\0\19DiagnosticWarn\asp\bred\abg\afg\1\0\0\tnone\20DiagnosticErrorV\1\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0003\3\3\0=\3\5\2B\0\2\1K\0\1\0\18on_highlights\1\0\0\0\nsetup\15everforest\frequire\0", "config", "everforest-nvim")
@@ -218,10 +252,6 @@ time([[Config for everforest-nvim]], false)
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
--- Config for: nvim-surround
-time([[Config for nvim-surround]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
-time([[Config for nvim-surround]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

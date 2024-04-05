@@ -6,7 +6,8 @@ lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
-require'lspconfig'.anakin_language_server.setup{}
+require('lspconfig').dartls.setup{}
+vim.g.dart_format_on_save = 'v:true'
 
 require("mason").setup({})
 require('mason-lspconfig').setup({

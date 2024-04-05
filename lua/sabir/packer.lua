@@ -7,6 +7,7 @@ return require('packer').startup(function(use)
         -- or                            , brnch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use 'simrat39/rust-tools.nvim'
 
     use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
 
@@ -103,7 +104,21 @@ return require('packer').startup(function(use)
             {'L3MON4D3/LuaSnip'},
         }
     }
+  -- other plugins...
 
+    -- Completion framework:
+    use 'hrsh7th/nvim-cmp' 
+
+    -- LSP completion source:
+    use 'hrsh7th/cmp-nvim-lsp'
+
+    -- Useful completion sources:
+    use 'hrsh7th/cmp-nvim-lua'
+    use 'hrsh7th/cmp-nvim-lsp-signature-help'
+    use 'hrsh7th/cmp-vsnip'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/vim-vsnip'
     -- everforest
     use({
         "neanias/everforest-nvim",

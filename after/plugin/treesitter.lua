@@ -2,7 +2,7 @@ local treesitter_ok, treesitter = pcall(require, 'nvim-treesitter.configs')
 
 if treesitter_ok then
     treesitter.setup{
-        ensure_installed = { 'c', 'lua', 'vim', 'go', 'python' },
+        ensure_installed = { 'c', 'lua', 'vim', 'go', 'python', 'dart', 'rust' },
         sync_install = false,
         auto_install = false,
         highlight = { enable = false },

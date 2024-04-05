@@ -14,7 +14,7 @@ cmp.setup({
     window = {
         completion = cmp.config.window.bordered({
             border = "none",
-            padding = 20,
+            padding = 0;
         })
     }
 })
