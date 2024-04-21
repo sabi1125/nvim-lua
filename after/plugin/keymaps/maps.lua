@@ -24,7 +24,7 @@ end)
 vim.keymap.set('n', '<leader><leader>z', ':qa<CR>', { noremap = true, silent = true })
 
 -- Keymaps with Ctrl
-vim.keymap.set('n', '<C-;>', ':TroubleToggle<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-o>', ':TroubleToggle<CR>', { noremap = true, silent = true })
 
 -- show diagnostics
 vim.keymap.set('n', '<C-i>', function()
