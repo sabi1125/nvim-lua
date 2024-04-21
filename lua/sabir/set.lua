@@ -20,8 +20,11 @@ vim.opt.relativenumber = true
 vim.opt.cursorline = false
 vim.opt.mouse = 'a'
 vim.opt.expandtab = true
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.swapfile = false
 vim.opt.listchars = 'tab:┃ ,eol:↴'
 vim.opt.fillchars = 'eob:·'
+vim.g.qf_buflist_split_lines = 1
+vim.opt.efm:append("%f|%l|%m %\\|%f|\\|%l|\\|%m %m")
+vim.opt.scrolloff = 10

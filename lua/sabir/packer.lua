@@ -9,6 +9,7 @@ return require('packer').startup(function(use)
     }
     use 'simrat39/rust-tools.nvim'
     use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
+    use {"folke/trouble.nvim"}
 
     -- markdown mkdx
     use 'SidOfc/mkdx'

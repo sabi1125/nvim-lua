@@ -4,14 +4,15 @@ local telescopeBuiltin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>a', ':tabprev<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>d', ':tabnext<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>f', ':tabnew<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>g', ':Goyo<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>h', ':Goyo!<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>g', ':Glow<CR>', { noremap = true, silent = true })
 -- vim.keymap.set('n', '<leader>i', function()
 -- vim.keymap.set('n', '<leader>j', function()
 vim.keymap.set('n', '<leader>m', ':FloatermNew<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>n', ':cclose<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>r', ':NvimTreeFocus<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>;', ':TroubleToggle<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<ESC>', '<cmd>nohlsearch<CR>', { noremap = true, silent = true })
 
 -- keymaps double leader
 vim.keymap.set('n', '<leader><leader>f', telescopeBuiltin.find_files, {})
@@ -21,6 +22,9 @@ vim.keymap.set('n', '<leader><leader>s', function()
     telescopeBuiltin.grep_string({ search = vim.fn.input("Grep ▶  ") })
 end)
 vim.keymap.set('n', '<leader><leader>z', ':qa<CR>', { noremap = true, silent = true })
+
+-- Keymaps with Ctrl
+vim.keymap.set('n', '<C-;>', ':TroubleToggle<CR>', { noremap = true, silent = true })
 
 -- show diagnostics
 vim.keymap.set('n', '<leader>i', function()
