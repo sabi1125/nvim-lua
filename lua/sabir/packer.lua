@@ -14,17 +14,6 @@ return require('packer').startup(function(use)
     -- markdown mkdx
     use 'SidOfc/mkdx'
 
-    -- goyo
-    use { 'junegunn/goyo.vim' }
-
-    -- limelight
-    use { 'junegunn/limelight.vim' }
-
-    vim.cmd[[
-    autocmd! User GoyoEnter Limelight
-    autocmd! User GoyoLeave Limelight!
-    ]]
-
     -- nerdCommenter
     use { 'preservim/nerdcommenter' }
 

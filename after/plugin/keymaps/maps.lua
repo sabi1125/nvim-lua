@@ -27,7 +27,7 @@ vim.keymap.set('n', '<leader><leader>z', ':qa<CR>', { noremap = true, silent = t
 vim.keymap.set('n', '<C-;>', ':TroubleToggle<CR>', { noremap = true, silent = true })
 
 -- show diagnostics
-vim.keymap.set('n', '<leader>i', function()
+vim.keymap.set('n', '<C-i>', function()
     -- If we find a floating window, close it.
     local found_float = false
     for _, win in ipairs(vim.api.nvim_list_wins()) do
@@ -52,8 +52,19 @@ vim.keymap.set('n', '<leader>i', function()
     })
 end )
 
+-- remove realative numbers
+vim.keymap.set('n', '<C-n>', function()
+    if not vim.opt.relativenumber:get() then
+        vim.opt.relativenumber = true
+        vim.opt.number = true
+    elseif vim.opt.relativenumber:get() then
+        vim.opt.relativenumber = false
+        vim.opt.number = false
+    end
+end)
+
 -- show relations
-vim.keymap.set('n', '<leader>j', function()
+vim.keymap.set('n', '<C-j>', function()
     -- If we find a floating window, close it.
     local found_float = false
     for _, win in ipairs(vim.api.nvim_list_wins()) do
