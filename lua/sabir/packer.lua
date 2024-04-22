@@ -7,55 +7,41 @@ return require('packer').startup(function(use)
         -- or                            , brnch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    -- rust
     use 'simrat39/rust-tools.nvim'
+    -- glow
     use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
+    -- trouble
     use {"folke/trouble.nvim"}
-
     -- markdown mkdx
     use 'SidOfc/mkdx'
-
     -- nerdCommenter
     use { 'preservim/nerdcommenter' }
-
     -- go vim
     use ( 'fatih/vim-go', { run = ':GoUpdateBinaries' } )
-
-
     -- float term
     use 'voldikss/vim-floaterm'
-
     -- blamer
     use 'APZelos/blamer.nvim'
-
-    -- indent-blankline
-    use ({"lukas-reineke/indent-blankline.nvim"})
-
     -- treesitter
     use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-
     -- nerd-icons
     use 'nvim-tree/nvim-web-devicons'
-
     -- fugitive
     use 'tpope/vim-fugitive'
-
     -- git signs
     use {'lewis6991/gitsigns.nvim'}
-
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
             'nvim-tree/nvim-web-devicons', -- optional
         },
     }
-
     -- auto-pairs
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
-
-
     -- noice
     use {
         "folke/noice.nvim",
@@ -64,7 +50,6 @@ return require('packer').startup(function(use)
             "rcarriga/nvim-notify",
         }
     }
-
     -- surround
     use({
         "kylechui/nvim-surround",
@@ -75,7 +60,6 @@ return require('packer').startup(function(use)
             })
         end
     })
-
     -- lsp-zero
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -94,13 +78,10 @@ return require('packer').startup(function(use)
         }
     }
     -- other plugins...
-
     -- Completion framework:
-    use 'hrsh7th/nvim-cmp' 
-
+    use 'hrsh7th/nvim-cmp'
     -- LSP completion source:
     use 'hrsh7th/cmp-nvim-lsp'
-
     -- Useful completion sources:
     use 'hrsh7th/cmp-nvim-lua'
     use 'hrsh7th/cmp-nvim-lsp-signature-help'
@@ -123,13 +104,14 @@ return require('packer').startup(function(use)
                     end })
         end,
     })
-
     vim.cmd.colorscheme('everforest')
-
     -- catppuchin
     --use { "catppuccin/nvim", as = "catppuccin", vim.cmd.colorscheme('catppuccin-frappe') }
     -- tokyo night
     --use {"folke/tokyonight.nvim"}
     --vim.cmd.colorscheme('tokyonight')
     --
+
+    -- indent-blankline
+    --use ({"lukas-reineke/indent-blankline.nvim"})
 end)

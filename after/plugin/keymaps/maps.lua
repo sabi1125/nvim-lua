@@ -11,7 +11,6 @@ vim.keymap.set('n', '<leader>m', ':FloatermNew<CR>', { noremap = true, silent = 
 vim.keymap.set('n', '<leader>n', ':cclose<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>r', ':NvimTreeFocus<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>;', ':TroubleToggle<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<ESC>', '<cmd>nohlsearch<CR>', { noremap = true, silent = true })
 
 -- keymaps double leader
@@ -27,7 +26,7 @@ vim.keymap.set('n', '<leader><leader>z', ':qa<CR>', { noremap = true, silent = t
 vim.keymap.set('n', '<C-;>', ':TroubleToggle<CR>', { noremap = true, silent = true })
 
 -- show diagnostics
-vim.keymap.set('n', '<C-i>', function()
+vim.keymap.set('n', '<C-k>', function()
     -- If we find a floating window, close it.
     local found_float = false
     for _, win in ipairs(vim.api.nvim_list_wins()) do
