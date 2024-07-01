@@ -13,6 +13,10 @@ vim.cmd('highlight TelescopePreviewBorder guibg=#1f2529')
 vim.cmd('highlight TelescopeResultsTitle guibg=#1f2529')
 vim.cmd('highlight TelescopeResultsBorder guibg=#1f2529')
 vim.cmd('highlight TelescopeSelection guibg=#1f2529')
+vim.cmd('highlight TreesitterContext guibg=none guifg=#E67E80')
+vim.cmd('highlight TreesitterContextLineNumber guibg=#E67E80 guifg=#2D353B')
+
+-- hi TreesitterContextBottom gui=underline guisp=Grey
 
 -- hover highlights
 local bg_color = '#1f2529'

@@ -25,6 +25,8 @@ return require('packer').startup(function(use)
     use 'APZelos/blamer.nvim'
     -- treesitter
     use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    -- nvim-tree-sitter-context
+    use ('nvim-treesitter/nvim-treesitter-context')
     -- nerd-icons
     use 'nvim-tree/nvim-web-devicons'
     -- fugitive
