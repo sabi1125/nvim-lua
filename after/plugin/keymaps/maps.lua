@@ -16,14 +16,15 @@ vim.keymap.set('n', '<ESC>', '<cmd>nohlsearch<CR>', { noremap = true, silent = t
 -- keymaps double leader
 vim.keymap.set('n', '<leader><leader>f', telescopeBuiltin.find_files, {})
 vim.keymap.set('n', '<leader><leader>g', telescopeBuiltin.git_files, {})
-vim.keymap.set('n', '<leader><leader>n', ':copen<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>gg', telescopeBuiltin.live_grep, {})
+vim.keymap.set('n', '<leader>n', ':copen<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader><leader>s', function()
     telescopeBuiltin.grep_string({ search = vim.fn.input("Grep ▶  ") })
 end)
 vim.keymap.set('n', '<leader><leader>z', ':qa<CR>', { noremap = true, silent = true })
 
 -- Keymaps with Ctrl
-vim.keymap.set('n', '<C-;>', ':TroubleToggle<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-l>', ':Trouble diagnostics toggle<CR>', { noremap = true, silent = true })
 
 -- show diagnostics
 vim.keymap.set('n', '<C-k>', function()
@@ -77,4 +78,13 @@ vim.keymap.set('n', '<C-j>', function()
         return
     end
     vim.lsp.buf.hover()
+end)
+
+-- debugger
+vim.keymap.set('n', '<leader>5', function()
+    require('dapui').toggle()
+end)
+
+vim.keymap.set('n', '<leader>1', function()
+    require('dap').toggle_breakpoint()
 end)

@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/sabir/.cache/nvim/packer_hererocks/2.1.1713773202/share/lua/5.1/?.lua;/home/sabir/.cache/nvim/packer_hererocks/2.1.1713773202/share/lua/5.1/?/init.lua;/home/sabir/.cache/nvim/packer_hererocks/2.1.1713773202/lib/luarocks/rocks-5.1/?.lua;/home/sabir/.cache/nvim/packer_hererocks/2.1.1713773202/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/sabir/.cache/nvim/packer_hererocks/2.1.1713773202/lib/lua/5.1/?.so"
+local package_path_str = "/home/sabir/.cache/nvim/packer_hererocks/2.1.1720049189/share/lua/5.1/?.lua;/home/sabir/.cache/nvim/packer_hererocks/2.1.1720049189/share/lua/5.1/?/init.lua;/home/sabir/.cache/nvim/packer_hererocks/2.1.1720049189/lib/luarocks/rocks-5.1/?.lua;/home/sabir/.cache/nvim/packer_hererocks/2.1.1720049189/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/sabir/.cache/nvim/packer_hererocks/2.1.1720049189/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -115,7 +115,7 @@ _G.packer_plugins = {
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
   ["everforest-nvim"] = {
-    config = { "\27LJ\2\n¨\2\0\2\4\0\16\0!5\2\2\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\5\1=\3\6\2=\2\0\0005\2\b\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\t\1=\3\6\2=\2\a\0005\2\v\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\f\1=\3\6\2=\2\n\0005\2\14\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\15\1=\3\6\2=\2\r\0K\0\1\0\ngreen\1\0\3\abg\0\afg\0\asp\0\19DiagnosticHint\tblue\1\0\3\abg\0\afg\0\asp\0\19DiagnosticInfo\vyellow\1\0\3\abg\0\afg\0\asp\0\19DiagnosticWarn\asp\bred\abg\afg\1\0\3\abg\0\afg\0\asp\0\tnone\20DiagnosticErrore\1\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0003\3\3\0=\3\5\2B\0\2\1K\0\1\0\18on_highlights\1\0\1\18on_highlights\0\0\nsetup\15everforest\frequire\0" },
+    config = { "\27LJ\2\n¨\2\0\2\4\0\16\0!5\2\2\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\5\1=\3\6\2=\2\0\0005\2\b\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\t\1=\3\6\2=\2\a\0005\2\v\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\f\1=\3\6\2=\2\n\0005\2\14\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\15\1=\3\6\2=\2\r\0K\0\1\0\ngreen\1\0\3\afg\0\asp\0\abg\0\19DiagnosticHint\tblue\1\0\3\afg\0\asp\0\abg\0\19DiagnosticInfo\vyellow\1\0\3\afg\0\asp\0\abg\0\19DiagnosticWarn\asp\bred\abg\afg\1\0\3\afg\0\asp\0\abg\0\tnone\20DiagnosticErrore\1\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0003\3\3\0=\3\5\2B\0\2\1K\0\1\0\18on_highlights\1\0\1\18on_highlights\0\0\nsetup\15everforest\frequire\0" },
     loaded = true,
     path = "/home/sabir/.local/share/nvim/site/pack/packer/start/everforest-nvim",
     url = "https://github.com/neanias/everforest-nvim"
@@ -124,12 +124,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sabir/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
-  },
-  ["glow.nvim"] = {
-    config = { "\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tglow\frequire\0" },
-    loaded = true,
-    path = "/home/sabir/.local/share/nvim/site/pack/packer/start/glow.nvim",
-    url = "https://github.com/ellisonleao/glow.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -145,6 +139,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sabir/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["mini.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/sabir/.local/share/nvim/site/pack/packer/opt/mini.nvim",
+    url = "https://github.com/echasnovski/mini.nvim"
   },
   mkdx = {
     loaded = true,
@@ -177,10 +177,30 @@ _G.packer_plugins = {
     path = "/home/sabir/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/home/sabir/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-dap-go"] = {
+    loaded = true,
+    path = "/home/sabir/.local/share/nvim/site/pack/packer/start/nvim-dap-go",
+    url = "https://github.com/leoluz/nvim-dap-go"
+  },
+  ["nvim-dap-ui"] = {
+    loaded = true,
+    path = "/home/sabir/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
+    url = "https://github.com/rcarriga/nvim-dap-ui"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/sabir/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-nio"] = {
+    loaded = true,
+    path = "/home/sabir/.local/share/nvim/site/pack/packer/start/nvim-nio",
+    url = "https://github.com/nvim-neotest/nvim-nio"
   },
   ["nvim-notify"] = {
     loaded = true,
@@ -223,6 +243,14 @@ _G.packer_plugins = {
     path = "/home/sabir/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["render-markdown"] = {
+    config = { "\27LJ\2\nA\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\20render-markdown\frequire\0" },
+    load_after = {},
+    loaded = true,
+    needs_bufread = false,
+    path = "/home/sabir/.local/share/nvim/site/pack/packer/opt/render-markdown",
+    url = "https://github.com/MeanderingProgrammer/markdown.nvim"
+  },
   ["rust-tools.nvim"] = {
     loaded = true,
     path = "/home/sabir/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
@@ -261,22 +289,27 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: everforest-nvim
-time([[Config for everforest-nvim]], true)
-try_loadstring("\27LJ\2\n¨\2\0\2\4\0\16\0!5\2\2\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\5\1=\3\6\2=\2\0\0005\2\b\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\t\1=\3\6\2=\2\a\0005\2\v\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\f\1=\3\6\2=\2\n\0005\2\14\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\15\1=\3\6\2=\2\r\0K\0\1\0\ngreen\1\0\3\abg\0\afg\0\asp\0\19DiagnosticHint\tblue\1\0\3\abg\0\afg\0\asp\0\19DiagnosticInfo\vyellow\1\0\3\abg\0\afg\0\asp\0\19DiagnosticWarn\asp\bred\abg\afg\1\0\3\abg\0\afg\0\asp\0\tnone\20DiagnosticErrore\1\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0003\3\3\0=\3\5\2B\0\2\1K\0\1\0\18on_highlights\1\0\1\18on_highlights\0\0\nsetup\15everforest\frequire\0", "config", "everforest-nvim")
-time([[Config for everforest-nvim]], false)
--- Config for: nvim-surround
-time([[Config for nvim-surround]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
-time([[Config for nvim-surround]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
--- Config for: glow.nvim
-time([[Config for glow.nvim]], true)
-try_loadstring("\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tglow\frequire\0", "config", "glow.nvim")
-time([[Config for glow.nvim]], false)
+-- Config for: nvim-surround
+time([[Config for nvim-surround]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
+time([[Config for nvim-surround]], false)
+-- Config for: everforest-nvim
+time([[Config for everforest-nvim]], true)
+try_loadstring("\27LJ\2\n¨\2\0\2\4\0\16\0!5\2\2\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\5\1=\3\6\2=\2\0\0005\2\b\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\t\1=\3\6\2=\2\a\0005\2\v\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\f\1=\3\6\2=\2\n\0005\2\14\0009\3\1\1=\3\3\0029\3\1\1=\3\4\0029\3\15\1=\3\6\2=\2\r\0K\0\1\0\ngreen\1\0\3\afg\0\asp\0\abg\0\19DiagnosticHint\tblue\1\0\3\afg\0\asp\0\abg\0\19DiagnosticInfo\vyellow\1\0\3\afg\0\asp\0\abg\0\19DiagnosticWarn\asp\bred\abg\afg\1\0\3\afg\0\asp\0\abg\0\tnone\20DiagnosticErrore\1\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0003\3\3\0=\3\5\2B\0\2\1K\0\1\0\18on_highlights\1\0\1\18on_highlights\0\0\nsetup\15everforest\frequire\0", "config", "everforest-nvim")
+time([[Config for everforest-nvim]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-treesitter ]]
+vim.cmd [[ packadd render-markdown ]]
+
+-- Config for: render-markdown
+try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\20render-markdown\frequire\0", "config", "render-markdown")
+
+time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
