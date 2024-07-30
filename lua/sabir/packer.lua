@@ -7,6 +7,17 @@ return require('packer').startup(function(use)
         -- or                            , brnch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use({
+        'MeanderingProgrammer/markdown.nvim',
+        as = 'render-markdown', -- Only needed if you have another plugin named markdown.nvim
+        after = { 'nvim-treesitter' },
+        requires = { 'echasnovski/mini.nvim', opt = true }, -- if you use the mini.nvim suite
+        -- requires = { 'echasnovski/mini.icons', opt = true }, -- if you use standalone mini plugins
+        -- requires = { 'nvim-tree/nvim-web-devicons', opt = true }, -- if you prefer nvim-web-devicons
+        config = function()
+            require('render-markdown').setup({})
+        end,
+    })
     -- rust
     use 'simrat39/rust-tools.nvim'
     -- glow
