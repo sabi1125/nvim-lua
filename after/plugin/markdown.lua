@@ -34,4 +34,14 @@ require('render-markdown').setup({
         -- Highlight for code blocks & inline code
         highlight = 'ColorColumn',
     },
+    link = {
+        -- Turn on / off inline link icon rendering
+        enabled = true,
+        -- Inlined with 'image' elements
+        image = '󰥶 ',
+        -- Inlined with 'inline_link' elements
+        hyperlink = '󰌹 ',
+        -- Applies to the inlined icon
+        highlight = 'RenderMarkdownLink',
+    },
 })
