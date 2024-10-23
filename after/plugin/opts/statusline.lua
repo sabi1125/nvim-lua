@@ -47,20 +47,25 @@ end
 
 -- error line
 function FirstErrorLine()
-    -- Get the diagnostics for the current buffer
-    local diagnostics = vim.lsp.diagnostic.get_line_diagnostics()
-    -- Filter for only error severity diagnostics
-    local firstErrorLine = nil
-    for _, diagnostic in ipairs(diagnostics) do
-        if diagnostic.severity == vim.lsp.protocol.DiagnosticSeverity.Error then
-            firstErrorLine = diagnostic.range.start.line + 1  -- +1 for 1-based line number
-            break
-        end
-    end
+    local bufnr = vim.api.nvim_get_current_buf()
+    local diagnostics = vim.diagnostic.get(bufnr)
 
-    -- If we found an error, return the line number with an icon
-    if firstErrorLine then
-        return string.format("󰃤 %d", firstErrorLine)
+    local firstErrorLine = vim.tbl_filter(function (diag)
+        return diag.severity == vim.diagnostic.severity.ERROR
+    end, diagnostics)
+
+    if #firstErrorLine > 0 then
+        local line = firstErrorLine[1].lnum + 1
+        local currentLine = vim.api.nvim_win_get_cursor(0)[1] - 1  -- Get current cursor line (0-based)
+        line = line - currentLine
+        local absLine = math.abs(line)
+        if line > 1 then
+            return "󰮷 󰃤 " .. absLine - 1
+        elseif line < 1 then
+            return "󰮽 󰃤 " .. absLine + 1
+        elseif line == 1 then
+            return "  󰃤 " .. absLine
+        end
     else
         return ""  -- No errors, return empty
     end
