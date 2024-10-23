@@ -23,7 +23,7 @@ end)
 vim.keymap.set('n', '<leader><leader>z', ':qa<CR>', { noremap = true, silent = true })
 
 -- Keymaps with Ctrl
-vim.keymap.set('n', '<C-;>', ':Trouble diagnostics toggle filter.severity = vim.diagnostic.severity.ERROR<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-;>', ':Trouble diagnostics toggle focus=true filter.severity = vim.diagnostic.severity.ERROR<CR>', { noremap = true, silent = true })
 
 -- show diagnostics
 vim.keymap.set('n', '<C-k>', function()
