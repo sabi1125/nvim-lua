@@ -65,4 +65,4 @@ function FirstErrorLine()
     end
 end
 
-vim.o.statusline = "  %t %{v:lua.ModifyIcon()} %{v:lua.ReadOnly()}  %= %#StatusLineError# %{v:lua.FirstErrorLine()} %## %= %{v:lua.CurrentMode()}    %{v:lua.GitBranch()}   l:%lc:%c  󰹻 %p%% "
+vim.o.statusline = "  %t %{v:lua.ModifyIcon()} %{v:lua.ReadOnly()}  %= %#StatusLineError# %{v:lua.FirstErrorLine()} %## %= %#StatusLineError# %{v:lua.CurrentMode()}    %{v:lua.GitBranch()} %##   l:%lc:%c  󰹻 %p%% "
