@@ -21,7 +21,8 @@ function CurrentMode()
         v = " VIS",
         V = " VLN",
         ["\22"] = " VBL",  -- Visual Block mode (represented as char 22)
-        R = " REP"
+        R = " REP",
+        t = " TERM"
     }
     local currentMode = vim.api.nvim_get_mode().mode
     return mode_icons[currentMode] or "󰚾 ???"
