@@ -16,7 +16,8 @@ vim.keymap.set('n', '<ESC>', '<cmd>nohlsearch<CR>', { noremap = true, silent = t
 -- keymaps double leader
 vim.keymap.set('n', '<leader><leader>f', telescopeBuiltin.find_files, {})
 vim.keymap.set('n', '<leader><leader>g', telescopeBuiltin.git_files, {})
-vim.keymap.set('n', '<leader><leader>n', ':copen<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>gg', telescopeBuiltin.live_grep, {})
+vim.keymap.set('n', '<leader>n', ':copen<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader><leader>s', function()
     telescopeBuiltin.grep_string({ search = vim.fn.input("Grep ▶  ") })
 end)
@@ -102,3 +103,11 @@ vim.keymap.set('n', '<leader>p', function()
   vim.api.nvim_buf_set_option(buf, 'bufhidden', 'wipe')
   vim.api.nvim_command('edit ' .. vim.fn.expand("~/Documents/notes.md"))
 end,{ noremap = true, silent = true })
+-- debugger
+vim.keymap.set('n', '<leader>5', function()
+    require('dapui').toggle()
+end)
+
+vim.keymap.set('n', '<leader>1', function()
+    require('dap').toggle_breakpoint()
+end)

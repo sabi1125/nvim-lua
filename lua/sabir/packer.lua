@@ -3,7 +3,7 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.5',
+        'nvim-telescope/telescope.nvim', tag = '0.1.4',
         -- or                            , brnch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
@@ -18,14 +18,24 @@ return require('packer').startup(function(use)
             require('render-markdown').setup({})
         end,
     })
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio", "leoluz/nvim-dap-go"} }
     -- rust
     use 'simrat39/rust-tools.nvim'
-    -- glow
-    use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
     -- trouble
     use {"folke/trouble.nvim"}
     -- markdown mkdx
     use 'SidOfc/mkdx'
+    use({
+        'MeanderingProgrammer/markdown.nvim',
+        as = 'render-markdown', -- Only needed if you have another plugin named markdown.nvim
+        after = { 'nvim-treesitter' },
+        requires = { 'echasnovski/mini.nvim', opt = true }, -- if you use the mini.nvim suite
+        -- requires = { 'echasnovski/mini.icons', opt = true }, -- if you use standalone mini plugins
+        -- requires = { 'nvim-tree/nvim-web-devicons', opt = true }, -- if you prefer nvim-web-devicons
+        config = function()
+            require('render-markdown').setup({})
+        end,
+    })
     -- nerdCommenter
     use { 'preservim/nerdcommenter' }
     -- go vim
